@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<p>products works!</p>
+
+<div class="product-grid" >
+  <!--  {{product.title }}
+  {{product.price }} -->
+  <app-product 
+  *ngFor ="let product of products" 
+  (clickedCart)="clickedCart($event)" 
+  [product]="product">
+</app-product>
+</div>
